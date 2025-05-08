@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+/* img {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -20;
+} */
+
+.hero {
+    width: 100%;
+    min-height: calc(100vh - 82px);
+    position: relative;
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero img {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 3;
+}
+
+.hero h1 {
+    color: white;
+    margin: 0;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.hero h2 {
+    color: white;
+    margin: 0;
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.hero header {
+    /* background-color: #8b0000; */
+    color: rgb(116, 48, 48);
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h2 {
+    font-size: 15px;
+    font-display: swap;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #1b4167;
+    color: white;
+    min-height: 100vh;
+    padding: 10px;
+}
+
+.menu-button,
+.submenu-item {
+    width: 100%;
+    background-color: #495b80;
+    color: white;
+    border: none;
+    padding: 10px;
+    text-align: left;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.submenu {
+    display: none;
+    margin-left: 10px;
+}
+
+.submenu-item {
+    background-color: #515464;
+    margin: 3px 0;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 40px;
+    background-color: #e9e7e794;
+}
+
+.content h3 {
+    color: #8b0000;
+}
+
+.content p {
+    background-color: rgb(230, 230, 230);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.content img {
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+    height: 60%;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+
+/* Մոդալ պատուհան */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background: white;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.close {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.register-form label {
+    margin: 10px 0 5px;
+}
+
+.register-form input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.register-form button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #15597d;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.register-form button:hover {
+    background-color: #5d6164;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
